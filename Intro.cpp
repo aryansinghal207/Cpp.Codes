@@ -78,22 +78,22 @@
 // }
 
 // Print Number of Prime Number between 1 to 100   
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    int n=100;
-    int i,j;
-    for( i=2;i<100;i++){
-        for( j=2;j<i;j++){
-            if (i%j==0){
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int n=100;
+//     int i,j;
+//     for( i=2;i<100;i++){
+//         for( j=2;j<i;j++){
+//             if (i%j==0){
                 
-                break;
-            }
-        }
-        if (j==i) cout<<i;
-    }
-}
+//                 break;
+//             }
+//         }
+//         if (j==i) cout<<i;
+//     }
+// }
 
 // Sieve of Eratosthnes :- To find prime number between some given range we use this we calculate the root of the last number and check upto the root number we cancel the multiple of those number and lest ones are prime number in between that given range.
 
