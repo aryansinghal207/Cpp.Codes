@@ -1,25 +1,17 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+int cop(int a,int b){
+    int c=0;
+    for(int i=1;i<=a;i++){
+        if(a%i==0 && b%i==0){
+            c=i;
+        } 
+    }
+    if(c==1){
+        return 1;
+    }
+    else return 0;
+}
 int main(){
-    for(int i=1;i<=7;i++){
-        for(int j=1;j<=7;j++){
-            if(i<=4){
-                if((j>=1 && j<=5-i)||(j>=i+3&&j<=7)){
-                    cout<<"*";
-                }
-                else{
-                    cout<<" ";
-                }
-            }
-            else{
-                if((j>=1 && j<=i-3)||(j>=11-i&&j<=7)){
-                        cout<<"*";
-                }
-                else{
-                    cout<<" ";
-                }
-            }
-        }
-        cout<<endl;
-    }    
+    cout<<cop(22,24);
 }
