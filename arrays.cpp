@@ -48,21 +48,42 @@
 
 
 // Find number of triplets whose sum is equal to the target sum.
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int array[]={3,1,2,4,0,6};
+//     int target=6;
+//     int size=6;
+//     int pairs=0;
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             for(int k=j+1;k<size;k++){
+//                 if(array[i]+array[j]+array[k]==target){
+//                     pairs++;
+//                 }
+//             }
+//         }
+//     }
+//     cout<<pairs<<endl;
+// }
+
+
+// Array Manupulation
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int array[]={3,1,2,4,0,6};
-    int target=6;
-    int size=6;
-    int pairs=0;
+    int array[]={1,3,2,5,2,3,1};
+    int size=7;
     for(int i=0;i<size;i++){
         for(int j=i+1;j<size;j++){
-            for(int k=j+1;k<size;k++){
-                if(array[i]+array[j]+array[k]==target){
-                    pairs++;
-                }
+            if(array[i]==array[j]){
+                array[i]=array[j]=-1;
             }
         }
     }
-    cout<<pairs<<endl;
+    for(int i=0;i<size;i++){
+        if(array[i]>0){
+            cout<<array[i]<<endl;
+        }
+    }
 }
