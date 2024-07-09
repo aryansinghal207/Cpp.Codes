@@ -69,21 +69,37 @@
 
 
 // Array Manupulation
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int array[]={1,3,2,5,2,3,1};
+//     int size=7;
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             if(array[i]==array[j]){
+//                 array[i]=array[j]=-1;
+//             }
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         if(array[i]>0){
+//             cout<<array[i]<<endl;
+//         }
+//     }
+// }
+
+
+// Find the second largest element in the given array.
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int array[]={1,3,2,5,2,3,1};
-    int size=7;
+    int array[]={1,43,55,34,88};
+    int size=5;
+    int max=0;
     for(int i=0;i<size;i++){
-        for(int j=i+1;j<size;j++){
-            if(array[i]==array[j]){
-                array[i]=array[j]=-1;
-            }
+        if(array[i]>max){
+            max=array[i];
         }
     }
-    for(int i=0;i<size;i++){
-        if(array[i]>0){
-            cout<<array[i]<<endl;
-        }
-    }
-}
+    cout<<max;
+} 
