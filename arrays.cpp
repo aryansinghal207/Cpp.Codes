@@ -90,18 +90,41 @@
 
 
 // Find the largest element in the given array.
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int array[]={1,43,55,34,88};
+//     int size=5;
+//     int max=0;
+//     for(int i=0;i<size;i++){
+//         if(array[i]>max){
+//             max=array[i];
+//         }
+//     }
+//     cout<<max;
+// } 
+
+
+//### Find the Second largest element in the given array.
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int array[]={1,43,55,34,88};
-    int size=5;
-    int max=0;
-    for(int i=0;i<size;i++){
-        if(array[i]>max){
-            max=array[i];
+int main() {
+    int array[] = {1, 43, 55, 34, 88};
+    int size = 5;
+    int max = INT_MIN;
+    int second_max = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (array[i] > max) {
+            second_max = max;
+            max = array[i];
+        } else if (array[i] > second_max && array[i] != max) {
+            second_max = array[i];
         }
     }
-    cout<<max;
-} 
-
-
+    if (second_max == INT_MIN) {
+        cout << "No second largest element";
+    } else {
+        cout << second_max;
+    }
+    return 0;
+}
