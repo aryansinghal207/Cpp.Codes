@@ -89,7 +89,7 @@
 // }
 
 
-// Find the second largest element in the given array.
+// Find the largest element in the given array.
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
@@ -103,3 +103,5 @@ int main(){
     }
     cout<<max;
 } 
+
+
