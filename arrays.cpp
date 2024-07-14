@@ -106,25 +106,48 @@
 
 
 //### Find the Second largest element in the given array.
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main() {
+//     int array[] = {1, 43, 55, 34, 88};
+//     int size = 5;
+//     int max = INT_MIN;
+//     int second_max = INT_MIN;
+//     for (int i = 0; i < size; i++) {
+//         if (array[i] > max) {
+//             second_max = max;
+//             max = array[i];
+//         } else if (array[i] > second_max && array[i] != max) {
+//             second_max = array[i];
+//         }
+//     }
+//     if (second_max == INT_MIN) {
+//         cout << "No second largest element";
+//     } else {
+//         cout << second_max;
+//     }
+//     return 0;
+// }
+
+
+//### Rotataing a given array by k steps
+#include<bits/stdc++.h>
 using namespace std;
-int main() {
-    int array[] = {1, 43, 55, 34, 88};
-    int size = 5;
-    int max = INT_MIN;
-    int second_max = INT_MIN;
-    for (int i = 0; i < size; i++) {
-        if (array[i] > max) {
-            second_max = max;
-            max = array[i];
-        } else if (array[i] > second_max && array[i] != max) {
-            second_max = array[i];
-        }
+int main(){
+    int arr[]={1,2,3,4,5};
+    int n=5;
+    int k=4;
+    k=k%n;
+    int j=0;
+    int ansarr[5];
+    for(int i=n-k;i<n;i++){
+        ansarr[j++]=arr[i];
     }
-    if (second_max == INT_MIN) {
-        cout << "No second largest element";
-    } else {
-        cout << second_max;
+    for(int i=0;i<=k;i++){
+        ansarr[j++]=arr[i];
     }
-    return 0;
+    for(int i=0;i<n;i++){
+        cout<<ansarr[i]<<" ";
+    }
+    cout<<endl;
 }
