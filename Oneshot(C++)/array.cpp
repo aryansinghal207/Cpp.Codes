@@ -79,22 +79,51 @@
 
 
 // Write a code which print the square of the element in the array.
+// #include<iostream>
+// using namespace std;
+// void square(int arr[5]){
+//     int a[5];
+//     for(int i = 0; i < 5; i++){
+//         a[i] = arr[i] * arr[i]; // Square the elements of the input array
+//     }
+    // for(int i = 0; i < 5; i++){
+    //     cout << a[i] << " "; // Print each squared element
+    // }
+// }
+
+// int main(){
+//     int arr[5];
+//     for(int i = 0; i < 5; i++){
+//         cin >> arr[i];
+//     }
+//     square(arr);
+// }
+
+
+// WAP in which make odd index element double and even index element increment by 10
 #include<iostream>
 using namespace std;
-void square(int arr[5]){
-    int a[5];
-    for(int i = 0; i < 5; i++){
-        a[i] = arr[i] * arr[i]; // Square the elements of the input array
+
+void change(int arr[8]){
+    int a[8];
+    for(int i = 0; i < 8; i++){
+        if(i % 2 == 0){ // Check if index is even
+            a[i] = arr[i] + 10;
+        } else { // Index is odd
+            a[i] = arr[i] * 2;
+        }
     }
-    for(int i = 0; i < 5; i++){
-        cout << a[i] << " "; // Print each squared element
+    for(int i = 0; i < 8; i++){
+        cout << a[i] << " "; // Print each transformed element
     }
+    cout << endl;
 }
 
 int main(){
-    int arr[5];
-    for(int i = 0; i < 5; i++){
+    int arr[8];
+    for(int i = 0; i < 8; i++){
         cin >> arr[i];
     }
-    square(arr);
+    change(arr);
+    return 0;
 }
