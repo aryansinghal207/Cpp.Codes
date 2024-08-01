@@ -32,15 +32,32 @@
 
 
 // ## Make a function which calculate factorial of n using recursion.
+// #include<iostream>
+// using namespace std;
+// int fact(int n){
+//     if(n==0 || n==1) return 1;
+//     return n*fact(n-1);
+// }  
+// int main(){
+//     int a;;
+//     cout<<"Enter the value of a : ";
+//     cin>>a;
+//     cout<<fact(a);
+// }
+
+
+// ## Print the value of a raised to the power b
 #include<iostream>
 using namespace std;
-int fact(int n){
-    if(n==0 || n==1) return 1;
-    return n*fact(n-1);
-}  
+int power(int n,int x){
+    if(x==0) return 1;
+    return n*power(n,x-1);
+}
 int main(){
-    int a;;
-    cout<<"Enter the value of a : ";
+    int a,b;
+    cout<<"Enter the value of a :";
     cin>>a;
-    cout<<fact(a);
+    cout<<"Enter the last value : ";
+    cin>>b;
+    cout<<power(a,b);
 }
