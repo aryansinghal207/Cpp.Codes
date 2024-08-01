@@ -58,21 +58,43 @@
 
 
 // Find the minimum element from the array
+// #include<iostream>
+// using namespace std;
+// void findmin(int arr[5]){
+//     int min=arr[0];
+//     for(int i=0;i<5;i++){
+//         if(arr[i]<min){
+//             min=arr[i];
+//         }
+//     }
+//     cout<<min;
+// }
+// int main(){
+//     int arr[5];
+//     for(int i=0;i<5;i++){
+//         cin>>arr[i];
+//     }
+//     findmin(arr);
+// }
+
+
+// Write a code which print the square of the element in the array.
 #include<iostream>
 using namespace std;
-void findmin(int arr[5]){
-    int min=arr[0];
-    for(int i=0;i<5;i++){
-        if(arr[i]<min){
-            min=arr[i];
-        }
+void square(int arr[5]){
+    int a[5];
+    for(int i = 0; i < 5; i++){
+        a[i] = arr[i] * arr[i]; // Square the elements of the input array
     }
-    cout<<min;
+    for(int i = 0; i < 5; i++){
+        cout << a[i] << " "; // Print each squared element
+    }
 }
+
 int main(){
     int arr[5];
-    for(int i=0;i<5;i++){
-        cin>>arr[i];
+    for(int i = 0; i < 5; i++){
+        cin >> arr[i];
     }
-    findmin(arr);
+    square(arr);
 }
