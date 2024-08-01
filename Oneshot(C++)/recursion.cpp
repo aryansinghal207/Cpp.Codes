@@ -17,15 +17,30 @@
 
 
 // ## Return the sum from 1 to n 
+// #include<iostream>
+// using namespace std;
+// int sum(int n){
+//     if(n==1) return 1;
+//     return n + sum(n-1);
+// }
+// int main(){
+//     int a;
+//     cout<<"Enter the value of a : ";
+//     cin>>a;
+//     cout<<sum(a);
+// }
+
+
+// ## Make a function which calculate factorial of n using recursion.
 #include<iostream>
 using namespace std;
-int sum(int n){
-    if(n==1) return 1;
-    return n + sum(n-1);
-}
+int fact(int n){
+    if(n==0 || n==1) return 1;
+    return n*fact(n-1);
+}  
 int main(){
-    int a;
-    cout<<"Enter the value of a :";
+    int a;;
+    cout<<"Enter the value of a : ";
     cin>>a;
-    cout<<sum(a);
+    cout<<fact(a);
 }
