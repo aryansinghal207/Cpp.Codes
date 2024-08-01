@@ -37,21 +37,42 @@
 
 
 // Find the maximum element from the array
+// #include<iostream>
+// using namespace std;
+// void findmax(int arr[5]){
+//     int max=arr[0];
+//     for(int i=0;i<5;i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//     }
+//     cout<<max;
+// }
+// int main(){
+//     int arr[5];
+//     for(int i=0;i<5;i++){
+//         cin>>arr[i];
+//     }
+//     findmax(arr);
+// }
+
+
+// Find the minimum element from the array
 #include<iostream>
 using namespace std;
-void findmax(int arr[5]){
-    int max=arr[0];
+void findmin(int arr[5]){
+    int min=arr[0];
     for(int i=0;i<5;i++){
-        if(arr[i]>max){
-            max=arr[i];
+        if(arr[i]<min){
+            min=arr[i];
         }
     }
-    cout<<max;
+    cout<<min;
 }
 int main(){
     int arr[5];
     for(int i=0;i<5;i++){
         cin>>arr[i];
     }
-    findmax(arr);
+    findmin(arr);
 }
