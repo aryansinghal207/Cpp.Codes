@@ -128,30 +128,30 @@
 
 
 // Find the second largest element from array
-#include <iostream>
-using namespace std;
-void findSecondMax(int arr[5]) {
-    int max = INT_MIN;  // Initialize max to the smallest possible integer
-    int secondMax = INT_MIN;  // Initialize secondMax to the smallest possible integer
-    for (int i = 0; i < 5; i++) {
-        if (arr[i] > max) {
-            secondMax = max;  // Update secondMax before max changes
-            max = arr[i];  // Update max
-        } else if (arr[i] > secondMax && arr[i] != max) {
-            secondMax = arr[i];  // Update secondMax if the current element is not equal to max
-        }
-    }
-    if (secondMax == INT_MIN) {
-        cout << "No second largest element found";
-    } else {
-        cout << "The second largest element is: " << secondMax;
-    }
-}
-int main() {
-    int arr[5];
-    cout << "Enter 5 elements: ";
-    for (int i = 0; i < 5; i++) {
-        cin >> arr[i];
-    }
-    findSecondMax(arr);
-}
+// #include <iostream>
+// using namespace std;
+// void findSecondMax(int arr[5]) {
+//     int max = INT_MIN;  // Initialize max to the smallest possible integer
+//     int secondMax = INT_MIN;  // Initialize secondMax to the smallest possible integer
+//     for (int i = 0; i < 5; i++) {
+//         if (arr[i] > max) {
+//             secondMax = max;  // Update secondMax before max changes
+//             max = arr[i];  // Update max
+//         } else if (arr[i] > secondMax && arr[i] != max) {
+//             secondMax = arr[i];  // Update secondMax if the current element is not equal to max
+//         }
+//     }
+//     if (secondMax == INT_MIN) {
+//         cout << "No second largest element found";
+//     } else {
+//         cout << "The second largest element is: " << secondMax;
+//     }
+// }
+// int main() {
+//     int arr[5];
+//     cout << "Enter 5 elements: ";
+//     for (int i = 0; i < 5; i++) {
+//         cin >> arr[i];
+//     }
+//     findSecondMax(arr);
+// }
