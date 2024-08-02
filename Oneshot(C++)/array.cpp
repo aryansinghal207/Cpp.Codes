@@ -101,29 +101,57 @@
 
 
 // WAP in which make odd index element double and even index element increment by 10
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
+// void change(int arr[8]){
+//     int a[8];
+//     for(int i = 0; i < 8; i++){
+//         if(i % 2 == 0){ // Check if index is even
+//             a[i] = arr[i] + 10;
+//         } else { // Index is odd
+//             a[i] = arr[i] * 2;
+//         }
+//     }
+//     for(int i = 0; i < 8; i++){
+//         cout << a[i] << " "; // Print each transformed element
+//     }
+//     cout << endl;
+// }
+// int main(){
+//     int arr[8];
+//     for(int i = 0; i < 8; i++){
+//         cin >> arr[i];
+//     }
+//     change(arr);
+//     return 0;
+// }
 
-void change(int arr[8]){
-    int a[8];
-    for(int i = 0; i < 8; i++){
-        if(i % 2 == 0){ // Check if index is even
-            a[i] = arr[i] + 10;
-        } else { // Index is odd
-            a[i] = arr[i] * 2;
+
+// Find the second largest element from array
+#include <iostream>
+using namespace std;
+void findSecondMax(int arr[5]) {
+    int max = INT_MIN;  // Initialize max to the smallest possible integer
+    int secondMax = INT_MIN;  // Initialize secondMax to the smallest possible integer
+    for (int i = 0; i < 5; i++) {
+        if (arr[i] > max) {
+            secondMax = max;  // Update secondMax before max changes
+            max = arr[i];  // Update max
+        } else if (arr[i] > secondMax && arr[i] != max) {
+            secondMax = arr[i];  // Update secondMax if the current element is not equal to max
         }
     }
-    for(int i = 0; i < 8; i++){
-        cout << a[i] << " "; // Print each transformed element
+    if (secondMax == INT_MIN) {
+        cout << "No second largest element found";
+    } else {
+        cout << "The second largest element is: " << secondMax;
     }
-    cout << endl;
 }
-
-int main(){
-    int arr[8];
-    for(int i = 0; i < 8; i++){
+int main() {
+    int arr[5];
+    cout << "Enter 5 elements: ";
+    for (int i = 0; i < 5; i++) {
         cin >> arr[i];
     }
-    change(arr);
-    return 0;
+    findSecondMax(arr);
 }
