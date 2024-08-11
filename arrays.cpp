@@ -131,23 +131,58 @@
 
 
 //### Rotataing a given array by k steps
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int n=5;
+//     int k=4;
+//     k=k%n;
+//     int j=0;
+//     int ansarr[5];
+//     for(int i=n-k;i<n;i++){
+//         ansarr[j++]=arr[i];
+//     }
+//     for(int i=0;i<=k;i++){
+//         ansarr[j++]=arr[i];
+//     }
+//     for(int i=0;i<n;i++){
+//         cout<<ansarr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+// Sort an array consisting of only 0's and 1's
 #include<bits/stdc++.h>
 using namespace std;
+void sortzero(vector<int> &v){
+    int zero=0;
+    for(int ele:v){
+        if(ele==0){
+            zero++;
+        }
+    }
+    for(int i=0;i<v.size();i++){
+        if(i<zero){
+            v[i]=0;
+        }
+        else{
+            v[i]=1;
+        }
+    }
+}
 int main(){
-    int arr[]={1,2,3,4,5};
-    int n=5;
-    int k=4;
-    k=k%n;
-    int j=0;
-    int ansarr[5];
-    for(int i=n-k;i<n;i++){
-        ansarr[j++]=arr[i];
-    }
-    for(int i=0;i<=k;i++){
-        ansarr[j++]=arr[i];
-    }
+    int n;
+    cin>>n;
+    vector<int> v;
     for(int i=0;i<n;i++){
-        cout<<ansarr[i]<<" ";
+        int ele;cin>>ele;
+        v.push_back(ele);
     }
-    cout<<endl;
+    sortzero(v);
+    for(int i=0;i<n;i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+    return 0;
 }
