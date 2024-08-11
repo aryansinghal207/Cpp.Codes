@@ -28,6 +28,10 @@ class student{
     // Function Getter and Setter
     public:
     void setname(string a){
+        if(a.size()==0){
+            cout<<"Invalid name :";
+            return;
+        }
         name=a;
     }
     void setage(int b){
