@@ -34,6 +34,12 @@ public:
         cout << "Account: " << account << endl;
         cout << "Balance: " << balance << endl;
     }
+    // Copy Constructor
+    customer(customer &B){
+        name=B.name;
+        account=B.account;
+        balance=B.balance;
+    }
 };
 int main() {
     customer A1;
