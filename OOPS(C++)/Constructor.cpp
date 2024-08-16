@@ -39,13 +39,12 @@ int main() {
     customer A1;
     customer A2("Rohit", 123, 10000);
     customer A3("Mohit",10000);
+    customer A4(A2);
     A1.display();
     A2.display();
     A3.display();
+    A4.display();
     return 0;
 }
 
 
-// // 
-// #include<iostream>
-// using namespace std;
