@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 class customer {
+public:
     string name;
     int account;
     int balance;
-public:
 //Default Constructor
     customer() {
         cout << "Default constructor is called." << endl;

@@ -1,4 +1,4 @@
-// #A class is a user defined datatype #
+ // #A class is a user defined datatype #
 // #include<iostream>
 // using namespace std;
 // class student{
