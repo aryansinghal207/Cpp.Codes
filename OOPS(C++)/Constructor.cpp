@@ -8,9 +8,6 @@ public:
 //Default Constructor
     customer() {
         cout << "Default constructor is called." << endl;
-        name="Tohit";
-        account=987;
-        balance=345;
     }
 //Parametrized Constructor 
     customer(string a, int b, int c) {
@@ -35,6 +32,10 @@ public:
         cout << "Balance: " << balance << endl;
     }
     // Copy Constructor
+
+    // Deep copy :- when we copy the data of one constructor to other and after copying if we change one value of copied constructor it doesnot make any changes to previous constructor.
+    
+    // Shallow copy :- when we copy the data of one constructor to other and after copying if we change one value of copied constructor it make changes to previous constructor also.
     customer(customer &B){
         name=B.name;
         account=B.account;
@@ -42,9 +43,12 @@ public:
     }
 };
 int main() {
-    customer A1;
+    customer A1; //Default constructor
+    A1.name="Tohit";
+    A1.account=987;
+    A1.balance=345;
     customer A2("Rohit", 123, 10000);
-    customer A3("Mohit",10000);
+    customer A3("Mohit",10000);//Multiple Constructor
     customer A4(A2);
     A1.display();
     A2.display();
