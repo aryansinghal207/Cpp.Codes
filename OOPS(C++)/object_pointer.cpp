@@ -15,5 +15,5 @@ int main(){
     cricketer c1("Virat",25000,56);
     cricketer* c2=new cricketer("Dhoni",23000,72);
     cout<<c1.name<<" "<<c1.runs<<endl;
-    cout<<c1.name<<" "<<c1.runs<<endl;
+    cout<<c2->name<<" "<<c2->runs<<endl;
 }
